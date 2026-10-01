@@ -1,0 +1,10 @@
+# Claude Code local settings — служебные настройки инструмента, не часть проекта
+.claude/
+CLAUDE.md
+
+КПО-ДЗ-1-кикшеринг-ВШЭ.pdf
+/vyshkat
+*.exe
+*.test
+*.out
+coverage.html
