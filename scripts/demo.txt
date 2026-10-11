@@ -1,0 +1,23 @@
+# Демонстрационный сценарий: go run ./cmd/vyshkat < scripts/demo.txt
+
+# Приём транспорта через техосмотр (лимит 2.0 кВт·ч в сутки)
+add-scooter SC-1 "Самокат Дедлайн" 8 1.0
+add-scooter SC-2 "Самокат Энергозатратный" 7 3.5
+add-bicycle BC-1 "Велосипед городской" 9 true
+add-ebike   EB-1 "Электровелосипед" 5 1.8
+
+# Вещи ставятся на баланс без техосмотра
+add-helmet  HM-1 "Шлем спортивный" XL
+add-cabinet CC-1 "Зарядный шкаф" 0.5
+
+# Ошибки ввода не прерывают работу
+add-helmet  HM-1 "Ещё один шлем" M
+add-scooter SC-3 "Самокат" 11 1.0
+
+# Отчёты
+report-count
+report-energy
+report-novices
+report-inventory
+
+exit
