@@ -15,10 +15,10 @@ func NewServiceCenter(maxDailyEnergyKWh float64) *ServiceCenter {
 func (sc *ServiceCenter) Inspect(v domain.Vehicle) Verdict {
 	consumer, ok := v.(domain.EnergyConsumer)
 	if !ok {
-		return Verdict{Accepted: true, Reason: "vehicle does not consume energy"}
+		return Verdict{Accepted: true, Reason: "Транспорт не потребляет электричества"}
 	}
 	if consumer.DailyEnergyKWh() > sc.MaxDailyEnergyKWh {
-		return Verdict{Accepted: false, Reason: "vehicle daily energy consumption exceeds limit"}
+		return Verdict{Accepted: false, Reason: "Ежедневное электропотребление транспорта превышает лимит"}
 	}
-	return Verdict{Accepted: true, Reason: "vehicle within energy limit"}
+	return Verdict{Accepted: true, Reason: "Транспорт потребляющий электричество"}
 }
